@@ -1,16 +1,16 @@
 create table if not exists files(
-  fid         INTEGER primary key AUTOINCREMENT,
+  fid         serial primary key,
   name        text not null,
   link        text not null
 );
 
 create table if not exists tags(
-  tid         INTEGER primary key AUTOINCREMENT,
+  tid         serial primary key,
   name        text not null
 );
 
 create table if not exists file_tags(
-  tid         INTEGER,
-  fid         INTEGER,
+  tid         int,
+  fid         int,
   primary key (tid, fid)
 );

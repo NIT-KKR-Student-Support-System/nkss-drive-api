@@ -12,7 +12,6 @@ with open(courses) as f:
 pptmimeList = ["application/vnd.ms-powerpoint","application/vnd.openxmlformats-officedocument.presentationml.presentation"]
 
 data = []
-db.connect("data/db.sqlite3")
 
 for file in x:
     id = file["id"]
